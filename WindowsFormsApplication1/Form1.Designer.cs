@@ -35,7 +35,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 65);
+            this.button1.Location = new System.Drawing.Point(187, 6);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(145, 44);
             this.button1.TabIndex = 0;
@@ -55,11 +55,11 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(446, 166);
+            this.button3.Location = new System.Drawing.Point(12, 66);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(128, 53);
+            this.button3.Size = new System.Drawing.Size(144, 44);
             this.button3.TabIndex = 2;
-            this.button3.Text = "проверка изменения";
+            this.button3.Text = "Стоп сервера";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
