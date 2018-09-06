@@ -44,12 +44,14 @@ namespace WindowsFormsApplication1
                 string[] farmserv = { "chcp 855", "C:/1/Тестирование/feeding-farm-server/feeding-farm-server.exe"};
                 File.WriteAllLines("coms1.bat", farmserv, Encoding.GetEncoding(855));
                 Process.Start("coms1.bat");
+                File.Delete("coms1.bat");
 
                 string[] datatransferfarm = { "chcp 855", "C:/1/Тестирование/feeding-datatransfer-farm/netcoreapp2.0/win7-x64/publishr/EkoPoint.Feed.DataTransposeFarm.exe.exe" };
                 File.WriteAllLines("coms2.bat", datatransferfarm, Encoding.GetEncoding(855));
                 Process.Start("coms2.bat");
+                File.Delete("coms2.bat");
 
-                string[] diarycomp = { "chcp 855", "C:/1/Тестирование/feeding-diary-comp/feeding-diary-comp.exe" };
+            string[] diarycomp = { "chcp 855", "C:/1/Тестирование/feeding-diary-comp/feeding-diary-comp.exe" };
                 File.WriteAllLines("coms3.bat", diarycomp, Encoding.GetEncoding(855));
                 Process.Start("coms3.bat");
 
