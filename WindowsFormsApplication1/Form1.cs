@@ -84,7 +84,7 @@ namespace WindowsFormsApplication1
             File.Delete("coms6.bat");
             File.Delete("coms7.bat");
             File.Delete("coms8.bat");
-            
+            Browser.Close();
         }
     }
 }
