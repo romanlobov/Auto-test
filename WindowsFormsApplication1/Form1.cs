@@ -74,5 +74,15 @@ namespace WindowsFormsApplication1
                 Process.Start("coms8.bat");
             }
 
-}
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string[] liteserv = { "chcp 855", "cd C:/1/Тестирование/feeding-client", "lite-server" };
+            File.WriteAllLines("coms8.bat", liteserv, Encoding.GetEncoding(855));
+            Process.Start("coms8.bat");
+
+            string[] Tasks = { "chcp 855", "C:/1/Тестирование/feeding-task/netcoreapp2.0/win7-x64/publish/Ekopoint.Feeding.Tasks.exe" };
+            File.WriteAllLines("coms7.bat", Tasks, Encoding.GetEncoding(855));
+            Process.Start("coms7.bat");
+        }
+    }
 }
