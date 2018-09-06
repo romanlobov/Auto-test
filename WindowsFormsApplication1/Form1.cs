@@ -28,15 +28,7 @@ namespace WindowsFormsApplication1
         {
 
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //открываем браузер
-            Browser = new OpenQA.Selenium.Chrome.ChromeDriver();
-                Browser.Manage().Window.Maximize();
-            Browser.Navigate().GoToUrl("http://localhost:3000/");
-        }
-
+              
         private void button2_Click(object sender, EventArgs e)
 
         //Запускаем серверные приложения
@@ -72,10 +64,16 @@ namespace WindowsFormsApplication1
             string[] liteserv = { "chcp 855", "cd C:/1/Тестирование/feeding-client", "lite-server" };
                 File.WriteAllLines("coms8.bat", liteserv, Encoding.GetEncoding(855));
                 Process.Start("coms8.bat");
-                    }
+
+            //открываем браузер
+            Browser = new OpenQA.Selenium.Chrome.ChromeDriver();
+            Browser.Manage().Window.Maximize();
+            Browser.Navigate().GoToUrl("http://localhost:3000/");
+        }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            //Убиваем временные файлы серверные приложения
             File.Delete("coms1.bat");
             File.Delete("coms2.bat");
             File.Delete("coms3.bat");
@@ -84,7 +82,8 @@ namespace WindowsFormsApplication1
             File.Delete("coms6.bat");
             File.Delete("coms7.bat");
             File.Delete("coms8.bat");
-            Browser.Close();
+            //закрываем браузер
+            Browser.Quit();
         }
     }
 }
