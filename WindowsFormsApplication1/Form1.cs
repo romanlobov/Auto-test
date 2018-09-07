@@ -28,12 +28,24 @@ namespace WindowsFormsApplication1
         {
 
         }
-              
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Выбираем путь нахождения папки с программой
+            FolderBrowserDialog FBD = new FolderBrowserDialog();
+            FBD.ShowNewFolderButton = false;
+            if (FBD.ShowDialog() == DialogResult.OK)
+            {
+                textBox1.Clear();
+                textBox1.AppendText(FBD.SelectedPath);                
+            }
+
+        }
+
         private void button2_Click(object sender, EventArgs e)
 
-        //Запускаем серверные приложения
+            //Запускаем серверные приложения
         {
-            string[] farmserv = { "chcp 855", "C:/1/Тестирование/feeding-farm-server/feeding-farm-server.exe"};
+            string[] farmserv = { "chcp 855", "C:/1/Тестирование/feeding-farm-server/feeding-farm-server.exe" };
                 File.WriteAllLines("coms1.bat", farmserv, Encoding.GetEncoding(855));
                 Process.Start("coms1.bat");
           
@@ -81,9 +93,14 @@ namespace WindowsFormsApplication1
             File.Delete("coms5.bat");
             File.Delete("coms6.bat");
             File.Delete("coms7.bat");
-            File.Delete("coms8.bat");
+            File.Delete("coms8.bat"); 
             //закрываем браузер
             Browser.Quit();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {            
+            
         }
     }
 }
