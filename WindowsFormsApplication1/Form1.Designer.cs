@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1
 {
-    partial class Form1
+    partial class Тестирование
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -52,15 +52,15 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // Form1
+            // Тестирование
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(616, 302);
+            this.ClientSize = new System.Drawing.Size(507, 342);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "Тестирование";
+            this.Text = "Тестирование";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 

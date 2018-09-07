@@ -13,13 +13,13 @@ using System.IO;
 
 namespace WindowsFormsApplication1
 {
-    public partial class Form1 : Form
+    public partial class Тестирование : Form
     {
         IWebDriver Browser;
         
         public object chcp { get; private set; }
 
-        public Form1()
+        public Тестирование()
         {
             InitializeComponent();
         }
